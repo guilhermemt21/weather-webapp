@@ -1,0 +1,7 @@
+<div class="weather-item">
+    <h5 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h5>
+    <h6> {{ weather.weather[0].description  | uppercase }}</h6>
+    <p>Wind speed (meter/sec): {{ weather.wind.speed }}</p>
+    <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span> <br>
+    <p>{{ weather.dt_txt | date:'medium' }}</p>
+</div>

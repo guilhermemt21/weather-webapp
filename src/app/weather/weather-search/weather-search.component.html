@@ -1,0 +1,9 @@
+<form>
+    <div class="weather-search m-flex jc-content">
+        <label for="city">City Name:</label>
+        <input class="margin-left-5 margin-right-5" type="text" placeholder="Enter city name" id="city" [(ngModel)]="cityName"
+            name="cityname" (input)="onSearchLocationWithEvent($event)">
+        <button class="btn btn-primary" [disabled]="disabledForecastButton" (click)="onSubmitDatabinding()" type="submit">Forecast</button>
+    </div>
+</form>
+<weather-list [WeatherForecastList]="weatherForecastData"></weather-list>
